@@ -7,6 +7,8 @@ const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 console.log(next , prev);
 
+
+const overlay = document.getElementsByClassName('overlay');
 // imposta elemento visibile
 let activeItem = 0;
 
@@ -18,6 +20,7 @@ next.addEventListener('click',
          // togli la visibilità all'elemento corrente
         items[activeItem].classList.remove('active');
         items[activeItem].classList.add('hidden');
+        overlay[activeItem].classList.remove('active-overlay');
 
         // aumenta l'elemento corrente
         activeItem++;
@@ -30,6 +33,7 @@ next.addEventListener('click',
         // metti visibilità al nuovo elemento corrente
         items[activeItem].classList.remove('hidden');
         items[activeItem].classList.add('active');
+        overlay[activeItem].classList.add('active-overlay');
     });
 
 
@@ -40,6 +44,7 @@ next.addEventListener('click',
          // togli la visibilità all'elemento corrente
         items[activeItem].classList.remove('active');
         items[activeItem].classList.add('hidden');
+        overlay[activeItem].classList.remove('active-overlay');
 
         // aumenta l'elemento corrente
         activeItem--;
@@ -52,6 +57,7 @@ next.addEventListener('click',
         // metti visibilità al nuovo elemento corrente
         items[activeItem].classList.remove('hidden');
         items[activeItem].classList.add('active');
+        overlay[activeItem].classList.add('active-overlay');
     });
 
 
