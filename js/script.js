@@ -20,7 +20,7 @@ next.addEventListener('click',
          // togli la visibilità all'elemento corrente
         items[activeItem].classList.remove('active');
         items[activeItem].classList.add('hidden');
-        overlay[activeItem].classList.remove('active-overlay');
+        overlay[activeItem].classList.remove('hidden');
 
         // aumenta l'elemento corrente
         activeItem++;
@@ -33,7 +33,7 @@ next.addEventListener('click',
         // metti visibilità al nuovo elemento corrente
         items[activeItem].classList.remove('hidden');
         items[activeItem].classList.add('active');
-        overlay[activeItem].classList.add('active-overlay');
+        overlay[activeItem].classList.add('hidden');
     });
 
 
@@ -44,7 +44,7 @@ next.addEventListener('click',
          // togli la visibilità all'elemento corrente
         items[activeItem].classList.remove('active');
         items[activeItem].classList.add('hidden');
-        overlay[activeItem].classList.remove('active-overlay');
+        overlay[activeItem].classList.remove('hidden');
 
         // aumenta l'elemento corrente
         activeItem--;
@@ -57,7 +57,7 @@ next.addEventListener('click',
         // metti visibilità al nuovo elemento corrente
         items[activeItem].classList.remove('hidden');
         items[activeItem].classList.add('active');
-        overlay[activeItem].classList.add('active-overlay');
+        overlay[activeItem].classList.add('hidden');
     });
 
 
